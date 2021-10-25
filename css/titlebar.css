@@ -1,0 +1,27 @@
+.titlebar {
+    overflow: hidden;
+    width: 100%;
+    background-color: #354752;
+}
+
+.controlsxxx button {
+    position: relative;
+    top: -50px;
+    float: right;
+    background: transparent;
+    border: 0px;
+}
+.controlsxxx button:hover {
+    background: #42677e;
+    border: #42677e;
+}
+#exit_btn {
+    color: red;
+}
+#window-title {
+    text-align: center;
+    font-family: "Montserrat";
+    font-weight: bold;
+}
+
+

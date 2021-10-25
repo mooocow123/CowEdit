@@ -1,0 +1,58 @@
+body {
+    background: #252424;
+}
+* {
+    font-family: "Calibri";
+}
+button {
+    cursor: pointer;
+}
+.noselect {
+    user-select: none;
+}
+.explorercon {
+    width: 215px;
+    background: #2d3239;
+    position: relative;
+    top: 40px;
+    height: 300px;
+    color: white;
+    overflow: hidden scroll;
+}
+.dragbarcon {
+    display: flex;
+    justify-content: center;
+}
+.dragbar {
+    display: flex;
+    justify-content: center;
+    position: absolute;
+    background-color: lightskyblue;
+    -webkit-app-region: drag;
+    bottom: 0;
+    width: 80%;
+}
+div::-webkit-scrollbar-track {
+    -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+    background-color: #2c373f;
+  }
+
+  div::-webkit-scrollbar {
+    width: 12px;
+    background-color: #252424;
+  }
+
+  div::-webkit-scrollbar-thumb {
+    border-radius: 10px;
+    -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, .3);
+    background-color: #555;
+  }
+
+.explorercon * {
+    font-family: century-gothic;
+    font-style: normal;
+    font-weight: lighter;
+    position: relative;
+    left: 5%;
+    top: 15px;
+}

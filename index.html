@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/titlebar.css">
+    <link rel="stylesheet" href="css/menu.css">
+    <link rel="stylesheet" href="css/slate.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link rel="stylesheet" href="https://use.typekit.net/oov2wcw.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300&display=swap" rel="stylesheet">
+    <script src="js/titlebar.js"></script>
+    <script src="js/useraccounts.js"></script>
+    <script src="js/ex.js"></script>
+    <title>CowEdit</title>
+    <!-- Insert this line above script imports  -->
+    <script>if (typeof module === 'object') {window.module = module; module = undefined;}</script>
+<script src="js/jquery.min.js"></script>
+<script src="js/jquery.menu.js"></script>
+<script src="js/ace.js"></script>
+<script src="js/mode-javascript.js"></script>
+<script src="js/theme-twilight.js"></script>
+<script>if (window.module) module = window.module;</script>
+</head>
+<body>
+    <div class="titlebar">
+        <p id="window-title" class="noselect">CowEdit</p>
+        <div class="controlsxxx" class="noselect">
+            <button id="exit_btn" class="noselect" onclick="CloseApp()" border="0">X</button>
+            <button id="maximize_btn" class="noselect" onclick="MaximizeApp()" border="0">()</button>
+            <button id="minimize_btn" class="noselect" onclick="MinimizeApp()" border="0">-</button>
+        </div>
+        <div id="menu-bar" class="noselect">
+            <ul class="main-menu">
+                <li>
+                    File
+                    <ul>
+
+                       <li class="icon save" onclick='createNewFile()'><a href="#">New File<span>Ctrl+N</span></a></li>
+                        <li>New Folder</li>
+
+                        <li class="separator"></li>
+                        <li class="icon save" onclick='saveFile()'><a href="javascript:void(0)">Save<span>Ctrl+S</span></a></li>
+
+                        <li class="icon save" onclick="showSaveDialogAndSaveFile()"><a href="javascript:void(0)">Save As</a></li>
+
+                        <li class="separator"></li>
+
+                    </ul>
+                </li>
+                <li>
+                    View
+                    <ul>
+                        <li>Documents
+                            <ul>
+                                <li>All</li>
+                                <li class="separator"></li>
+                                <li>Unfinished</li>
+                                <li>Closed</li>
+                            </ul>
+                        </li>
+                        <li><a href="/#!/products">Products</a></li>
+                        <li class="separator"></li>
+                        <li>
+                            First level :) :)
+                            <ul>
+                                <li>
+                                    Second level :)
+                                    <ul>
+                                        <li>
+                                            Third level menu item :)
+                                        </li>
+                                        <li>
+                                        Third level :()
+                                        <ul>
+                                                <li>
+                                                    Forth level menu item 1
+                                                </li>
+                                                <li>
+                                                    Forth level menu item 2
+                                                </li>
+                                            </ul>
+                                        </li>
+                                        <li class="separator"></li>
+                                        <li>Another third level menu item</li>
+                                    </ul>
+                                </li>
+                                <li>
+                                    Items will make menus stretch as needed
+                                </li>
+                                <li class="separator"></li>
+                                <li>
+                                     Another menu item
+                                </li>
+                            </ul>
+                        </li>
+                        <li class="separator"></li>
+                    </ul>
+                </li>
+                <li>
+                    Window
+                    <ul>
+                        <li class="icon save"><a href="javascript:void(0)">Full Screen<span>F11</span></a></li>
+
+                        <li>
+                            <a href="javascript:void(0)" onclick='toggleWidgets()'>Widgets<span><input type='checkbox' id='widgetCheckbox'></span></a>
+                        </li>
+                        <li class="separator"></li>
+                        <li>
+                            Options
+                        </li>
+                    </ul>
+                </li>
+
+                <li>
+                    Tools
+                    <ul>
+                        <li>Code Snippets
+                            <ul>
+                                <li>HTML</li>
+                                <li>CSS</li>
+                                <li>JS</li>
+                            </ul>
+                        </li>
+                        </ul>
+                </li>
+
+                <li>
+                    Settings
+                    <ul>
+                        <li onclick='settings("theme")'>Themes</li>
+                    </ul>
+                </li>
+
+                <li>
+                    Help
+                    <ul>
+                        <li onclick='showShortcuts()'>Shortcuts</li>
+                        <li class="separator"></li>
+                        <li>About</li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <div class="explorercon noselect">
+        <h1 id="folder-title">Folder Title</h1>
+        <p>Filename...</p>
+        <p>Filename...</p>
+        <p>Filename...</p>
+        <p>Filename...</p>
+        <p>Filename...</p>
+        <p>Filename...</p>
+        <p>Filename...</p>
+        <p>Filename...</p>
+        <p>Filename...</p>
+        <p>Filename...</p>
+        <p>Filename...</p>
+        <p>Filename...</p>
+        <p>Filename...</p>
+        <p>Filename...</p>
+    </div>
+    <div id="codeScreen">
+      function foo() { console.log('Cows are great.') }
+    </div>
+    <script>
+        var editor = ace.edit("codeScreen");
+        editor.setTheme("ace/theme/twilight");
+        editor.session.setMode("ace/mode/javascript");
+    </script>
+    <div class="dragbarcon">
+        <div class="dragbar noselect">
+            <p>Status...</p>
+        </div>
+    </div>
+</body>
+</html>
